@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add Two Numbers</title>
+    <link rel="stylesheet" href="AddTwoNumber-style.css">
+</head>
+<body>
+	<div class="form-box">
+		<div class="header-text">
+			Add Two Numbers
+		</div>
+		<form id="additionForm" onsubmit="return false;">
+            <input placeholder="Enter number 1" type="number" id="number1" required> 
+            <input placeholder="Enter number 2" type="number" id="number2" required> 
+            <input placeholder="Result" type="text" id="result" readonly> 
+            <button type="button" onclick="addNumbers()">Add</button>
+        </form>
+	</div>
+
+    <script>
+        function addNumbers() {
+            var number1 = parseFloat(document.getElementById('number1').value);
+            var number2 = parseFloat(document.getElementById('number2').value);
+            var sum = number1 + number2;
+			document.getElementById("result").style.display="block";
+            document.getElementById('result').value = sum;
+        }
+    </script>
+</body>
+</html>
